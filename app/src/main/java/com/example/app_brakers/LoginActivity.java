@@ -21,7 +21,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String  usuario = ((EditText)findViewById(R.id.txtusuario)).getText().toString();
                 String password = ((EditText)findViewById(R.id.txtpassword)).getText().toString();
-                if (usuario.equals("Ferisava") && password.equals("salome"))
+                if (usuario.equals("piero") && password.equals("alvarez"))
                 {
                     Intent nuevapagina = new Intent(LoginActivity.this,MainActivity.class);
                     startActivity(nuevapagina);
