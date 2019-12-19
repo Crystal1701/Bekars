@@ -16,6 +16,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         btnProducts = (Button) findViewById(R.id.btnEnter);
         btnAboutsUs =(Button) findViewById(R.id.btnAboutUs);
+        btnAboutsUs.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                //Log.i(Settings.INFO,"About us");
+                Intent i = new Intent(MainActivity.this, AboutUsActivity.class);
+                startActivity(i);
+            }
+        });
         btnProducts.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -24,13 +31,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
-        btnAboutsUs.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v) {
-                //Log.i(Settings.INFO,"About us");
-                Intent i = new Intent(MainActivity.this, AboutUsActivity.class);
-                startActivity(i);
-            }
-        });
+
+
     }
 
     @Override
@@ -52,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Button btnProducts;
     private Button btnAboutsUs;
+
 
 
 }

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="#202732">
+    android:background="#4c8492">
 
     <Button
         android:id="@+id/btningresar"
@@ -24,7 +24,7 @@
         android:background="@drawable/butoon"/>
 
     <Button
-        android:id="@+id/btnregistrar"
+        android:id="@+id/btnRegistrar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -44,10 +44,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
         android:ems="10"
         android:hint="USUARIO"
         android:inputType="textPersonName"
@@ -74,12 +72,13 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="141dp"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:srcCompat="@drawable/avatar" />
 
     <ImageButton
         android:id="@+id/imageButton"
@@ -87,25 +86,36 @@
         android:layout_height="50dp"
         android:layout_marginTop="32dp"
         android:scaleType="fitCenter"
-        app:layout_constraintTop_toBottomOf="@+id/btnregistrar"
-        tools:layout_editor_absoluteX="183dp"/>
-    //tools:srcCompat="@drawable/facebook-logo-button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnRegistrar"
+        app:srcCompat="@drawable/facebook" />
 
     <ImageButton
         android:id="@+id/imageButton2"
         android:layout_width="50dp"
         android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="32dp"
         android:scaleType="fitCenter"
-        tools:layout_editor_absoluteX="255dp"
-        tools:layout_editor_absoluteY="458dp" />
-    //app:srcCompat="@drawable/instagram"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imageButton"
+        app:layout_constraintTop_toBottomOf="@+id/btnRegistrar"
+        app:srcCompat="@drawable/instagram" />
+
     <ImageButton
         android:id="@+id/imageButton3"
         android:layout_width="50dp"
         android:layout_height="50dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="30dp"
         android:scaleType="fitCenter"
-        tools:layout_editor_absoluteX="97dp"
-        tools:layout_editor_absoluteY="458dp" />
-    //app:srcCompat="@drawable/twitter-logo-button"*//
+        app:layout_constraintEnd_toStartOf="@+id/imageButton"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnRegistrar"
+        app:srcCompat="@drawable/twitter" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

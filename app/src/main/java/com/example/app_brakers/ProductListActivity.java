@@ -33,6 +33,7 @@ public class ProductListActivity extends AppCompatActivity {
         producto.add(new ProductoModelo("Muffin Corazon","S/.15",R.drawable.muffin));
         producto.add(new ProductoModelo("Galleta Personalizada","S./30",R.drawable.galleta));
         producto.add(new ProductoModelo("Torta Tres Leches","S./35",R.drawable.torta));
+        producto.add(new ProductoModelo("Nuevo","S./10",R.drawable.torta));
 
         return producto;
     }

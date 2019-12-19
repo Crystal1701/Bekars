@@ -11,17 +11,21 @@ import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_login2);
         Button boton = (Button)findViewById(R.id.btningresar);
+        btnResgistrar=(Button) findViewById(R.id.btnRegistrar);
         boton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String  usuario = ((EditText)findViewById(R.id.txtusuario)).getText().toString();
                 String password = ((EditText)findViewById(R.id.txtpassword)).getText().toString();
-                if (usuario.equals("piero") && password.equals("alvarez"))
+                if (usuario.equals("fernando") && password.equals("Salome"))
                 {
                     Intent nuevapagina = new Intent(LoginActivity.this,MainActivity.class);
                     startActivity(nuevapagina);
@@ -32,5 +36,15 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+        btnResgistrar.setOnClickListener(new View.OnClickListener() {
+         @Override
+        public void onClick(View v) {
+        //Log.i(Settings.INFO,"Registro");
+          Intent i = new Intent(LoginActivity.this, RegistrarActivity.class);
+            startActivity(i);
+          }
+        });
+
     }
+    private Button btnResgistrar;
 }
